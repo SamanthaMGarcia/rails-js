@@ -3,7 +3,7 @@ $(() => {
 })
 
 const bindClickHandlers = () => {
-    $("a.home_button").on('click', (e) => {
+    $("a.add_ingredient_button").on('click', (e) => {
         e.preventDefault()
         fetch(`/recipes.json`)
             .then(response => response.json())

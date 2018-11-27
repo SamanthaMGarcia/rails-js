@@ -12,7 +12,7 @@
 
 <%= link_to "Edit", edit_recipe_path(@recipe), class: "edit_button" %>
 <%= link_to "Delete", recipe_path(@recipe), method: :delete, class: "delete_button" %>
-<%= link_to "All Recipes", recipes_path, class: "home_button" %>
+<%= link_to "All Recipes", recipes_path, class: "index_button" %>
 
 <h5><%= @recipe.instructions %></h5>
 <h5>Ingredients <%= @recipe.ingredients.count %></h5>
