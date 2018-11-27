@@ -5,10 +5,10 @@
 
 <h1><%= @recipe.title %></h1>
 
-<div>
-  <%= button_tag 'Previous', class: 'js-prev', data: {id: @recipe.id} %>
-  <%= button_tag 'Next', class: 'js-next', data: {id: @recipe.id} %>
-</div>
+<!-- <div>
+  <#%= button_tag 'Previous', class: 'js-prev', data: {id: @recipe.id} %>
+  <#%= button_tag 'Next', class: 'js-next', data: {id: @recipe.id} %>
+</div> -->
 
 <%= link_to "Edit", edit_recipe_path(@recipe), class: "edit_button" %>
 <%= link_to "Delete", recipe_path(@recipe), method: :delete, class: "delete_button" %>
