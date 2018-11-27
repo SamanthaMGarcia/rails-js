@@ -50,11 +50,11 @@ class Recipe {
         return recipeHtml
     }
 
-    formatShow(recipe) {
-      let recipeHtml = `
-      <h3>${this.title}</h3>
-      <button class="next-recipe">Next</button>
-      `
-      return recipeHtml
-    }
+    // formatShow(recipe) {
+    //   let recipeHtml = `
+    //   <h3>${this.title}</h3>
+    //   <button class="next-recipe">Next</button>
+    //   `
+    //   return recipeHtml
+    // }
 }
