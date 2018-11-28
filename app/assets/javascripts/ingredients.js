@@ -1,4 +1,4 @@
-$("form").on('submit', function(e) {
+$("form_for").on('submit', function(e) {
   alert("test")
   e.preventDefault();
   e.returnValue = false;
