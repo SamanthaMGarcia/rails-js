@@ -30,19 +30,34 @@ const bindClickHandlers = () => {
     })
 }
 
-class Recipe {
-    constructor(id, title, instructions, ingredients) {
-        this.id = id,
-        this.title = title,
-        this.instructions = instructions,
-        this.ingredients = ingredients || []
-    }
-
-    formatIndex(recipe) {
-        console.log("recipe: ", recipe)
-
-        let recipeHtml = (`<a href="/recipes/${this.id}" data-id="${this.id}" class="show_link"><h1>${recipe.title}</h1></a>`)
-        return recipeHtml
-    }
+function Recipe(recipe) {
+  this.id = recipe.id
+  this.title = recipe.title
+  this.instructions = recipe.instructions
+  this.ingredients = recipe.ingredients
 
 }
+
+Recipe.prototype.formatIndex = function(){
+  let recipeHtml = `
+  <a href="/recipes/${this.id}" data-id="${this.id}" class="show_link"><h1>${this.title}</h1></a>
+  `
+  return recipeHtml
+}
+
+// class Recipe {
+//     constructor(id, title, instructions, ingredients) {
+//         this.id = id,
+//         this.title = title,
+//         this.instructions = instructions,
+//         this.ingredients = ingredients || []
+//     }
+
+//     formatIndex(recipe) {
+//         console.log("recipe: ", recipe)
+//
+//         let recipeHtml = (`<a href="/recipes/${this.id}" data-id="${this.id}" class="show_link"><h1>${recipe.title}</h1></a>`)
+//         return recipeHtml
+//     }
+//
+// }
