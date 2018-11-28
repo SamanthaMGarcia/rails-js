@@ -1,9 +1,16 @@
-$("form_for").on('submit', function(e) {
+$("form").submit(function){
   alert("test")
   e.preventDefault();
   e.returnValue = false;
 
 })
+
+// $("form").on('submit', function(e) {
+//   alert("test")
+//   e.preventDefault();
+//   e.returnValue = false;
+//
+// })
 
 
 
