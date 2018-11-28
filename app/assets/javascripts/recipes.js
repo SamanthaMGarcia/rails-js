@@ -19,20 +19,15 @@ const bindClickHandlers = () => {
           })
     })
 
-    $(document).on('click', ".show_link", function(e) {
-      e.preventDefault()
-      let id = $(this).attr('data-id')
-      fetch(`/recipes/${id}.json`)
-      .then(response => response.json())
-      .then(recipe => {
-        console.log(recipe)
-      })
-  })
-
-  $(document).on('click', 'next-recipe', function() {
-    let id = $(this).attr('data-id')
-    fetch(`recipes/${id}/next`)
-  })
+      $(document).on('click', ".show_link", function(e) {
+        e.preventDefault()
+        let id = $(this).attr('data-id')
+        fetch(`/recipes/${id}.json`)
+        .then(response => response.json())
+        .then(recipe => {
+          console.log(recipe)
+        })
+    })
 }
 
 class Recipe {
@@ -50,11 +45,4 @@ class Recipe {
         return recipeHtml
     }
 
-    // formatShow(recipe) {
-    //   let recipeHtml = `
-    //   <h3>${this.title}</h3>
-    //   <button class="next-recipe">Next</button>
-    //   `
-    //   return recipeHtml
-    // }
 }
