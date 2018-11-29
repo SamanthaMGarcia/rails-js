@@ -1,7 +1,7 @@
 class IngredientsController < ApplicationController
+  before_action :set_recipe
 
   def index
-    @recipe = Recipe.find(params[:recipe_id])
     @ingredients = Ingredient.all
     respond_to do |f|
       f.html
@@ -10,13 +10,15 @@ class IngredientsController < ApplicationController
   end
 
   def create
-    @recipe = Recipe.find(params[:recipe_id])
     @ingredient = @recipe.ingredients.create(ingredient_params)
-    redirect_to recipe_path(@recipe)
+      if @ingredient.save
+        render 'create.js'
+      else
+        render "recipes/show"
+      end
   end
 
   def destroy
-    @recipe = Recipe.find(params[:recipe_id])
     @ingredient = @recipe.ingredients.find(params[:id])
     @ingredient.destroy
     redirect_to recipe_path(@recipe)
@@ -24,6 +26,10 @@ class IngredientsController < ApplicationController
 end
 
   private
+
+    def set_recipe
+      @recipe = Recipe.find(params[:recipe_id])
+    end
 
     def ingredient_params
       params.require(:ingredient).permit(:name, :quantity)

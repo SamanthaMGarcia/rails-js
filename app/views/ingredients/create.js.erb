@@ -1,0 +1,3 @@
+$("#ingredient_name").val("") && $("#ingredient_quantity").val("");
+var $ol = $("div.ingredients ol")
+$ol.append("<%=j(render('ingredients/ingredient', :ingredient => @ingredient)) %>")
