@@ -7,8 +7,11 @@ $(function(){
       data: $(this).serialize(),
       success: function(response){
         $("#ingredient_name").val("") && $("#ingredient_quantity").val("");
-        var $ol = $("div.ingredients ol")
-        $ol.append(response);
+        var $ul = $("div.ingredients ul")
+        var ing = ` <li>${response.name}: ${response.quantity}</li> `
+        var link = `<a rel= "nofollow" data-method="delete" href= "/recipes/${response.recipe.id}/ingredients/${response.id}">Delete</a>`
+        $ul.append(ing + link);
+        $("div.actions input").prop("disabled", false)
       }
     });
 

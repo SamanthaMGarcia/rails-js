@@ -11,7 +11,11 @@
 
 <h5><%= @recipe.instructions %></h5>
 <h5>Ingredients <%= @recipe.ingredients.count %></h5>
-<%= render @recipe.ingredients %>
+  <div class="ingredients">
+    <ul>
+    <%= render @recipe.ingredients %>
+    </ul>
+  </div>
 
 <h5>Add Ingredients</h5>
 <%= render 'ingredients/form' %>

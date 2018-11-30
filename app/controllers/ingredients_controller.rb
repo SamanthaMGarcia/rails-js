@@ -12,7 +12,8 @@ class IngredientsController < ApplicationController
   def create
     @ingredient = @recipe.ingredients.create(ingredient_params)
       if @ingredient.save
-        render 'create.js'
+        # render 'create.js'
+        render json: @ingredient
       else
         render "recipes/show"
       end
