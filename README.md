@@ -1,24 +1,19 @@
-# README
+<h1>Days Off</h1>
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+The Recipes app is designed to allow users to submit recipes and attach necessary ingredients to said recipes.
 
-Things you may want to cover:
+Users are first required to create a recipe with instructions then adding ingredients is to follow.
 
-* Ruby version
+Recipes can be created, edited and deleted. Same for ingredients.
 
-* System dependencies
+Installation $ gem install rails-js Usage Type the below and follow the on screen prompts.
 
-* Configuration
+$ rails-js Development After checking out the repo, run bundle install to install dependencies.
 
-* Database creation
+To install this gem onto your local machine, run bundle exec rake install. To release a new version, update the version number in version.rb, and then run bundle exec rake release, which will create a git tag for the version, push git commits and tags, and push the .gem file to rubygems.org.
 
-* Database initialization
+Contributing Bug reports and pull requests are welcome on GitHub <a href= "https://github.com/SamanthaMGarcia/rails-js">here</a>. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the Contributor Covenant code of conduct.
 
-* How to run the test suite
+License The gem is available as open source under the terms of the <a href= "https://opensource.org/licenses/MIT">The MIT License</a>.
 
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+Copyright (c) 2018 samanthamgarcia
