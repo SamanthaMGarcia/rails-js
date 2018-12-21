@@ -60,10 +60,15 @@ Recipe.prototype.formatIndex = function(){
 }
 
 Recipe.prototype.formatShow = function(){
+  let ingredientsHtml = `<ul>`
+  this.ingredients.forEach(ingredient => ingredientsHtml += `<li>${ingredient.name}</li>`)
+  ingredientsHtml += `</ul>`
   let recipeHtml = `
   <h3>${this.title}</h3>
   <hr>
   <h4>${this.instructions}</h4>
+  <hr>
+  ${ingredientsHtml}
   `
   return recipeHtml
 }
