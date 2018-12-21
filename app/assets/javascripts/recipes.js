@@ -5,7 +5,7 @@ $(() => {
 const bindClickHandlers = () => {
     $("a.index_button").on('click', (e) => {
         e.preventDefault()
-        fetch(`/recipes.json`)
+        // fetch(`/recipes.json`)
         getRecipes()
 
       })
@@ -38,7 +38,7 @@ const getRecipes = () => {
           recipes.forEach(recipe => {
               let newRecipe = new Recipe(recipe)
               let recipeHtml = newRecipe.formatIndex(recipe)
-              $("div.recipes").append(recipeHtml)
+              $("div.recipes ol").append(recipeHtml)
          })
     })
 
