@@ -2,7 +2,7 @@ class RecipesController < ApplicationController
   before_action :find_recipe, only: [:show, :update, :edit, :destroy]
 
   def index
-    @recipes = Recipe.all.order("title ASC")
+    @recipes = Recipe.all
     respond_to do |f|
       f.html
       f.json {render json: @recipes}
